@@ -1,32 +1,39 @@
-let userGender;
-function GetUserGender(){
-while (true) {
-  userGender = prompt("Please enter your gender (male or female):").toLowerCase();
 
-  if (userGender === "male") {
-    alert("Welcome, Mr. " + userName);
-    break; 
-  } else if (userGender === "female") {
-    alert("Welcome, Ms. " + userName);
-    break; 
-  } else {
-    alert("Invalid input. Please enter 'male' or 'female'.");
+function GetUserGender() {
+  let userGender;
+  while (true) {
+    userGender = prompt("Please enter your gender (male or female):").toLowerCase();
+
+    if (userGender === "male") {
+      alert("Welcome, Mr. " + userName);
+      break;
+    } else if (userGender === "female") {
+      alert("Welcome, Ms. " + userName);
+      break;
+    } else {
+      alert("Invalid input. Please enter 'male' or 'female'.");
+    }
   }
+  return userGender;
 }
-}
-let answers = []; 
+
+
+
+
+
+let answers = [];
 
 let userName = prompt("Please enter your name:");
-answers.push(userName); 
+answers.push(userName);
 
 let userTitle = GetUserGender();
-answers.push(userGender); 
+answers.push(userTitle);
 
 let drinkType = prompt("Would you like a hot or cold drink?");
-answers.push(drinkType); 
+answers.push(drinkType);
 
 let drinkName = prompt("Please enter the name of the drink you want:");
-answers.push(drinkName); 
+answers.push(drinkName);
 
 alert("Your " + drinkType + " " + drinkName + " is getting prepared.");
 
