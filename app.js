@@ -60,7 +60,6 @@ sub.onclick = function collectDrinkOrder(e) {
   Age = document.querySelector('#age').value;
   userTitle=document.getElementById("gender");
   let gender =userTitle.options[userTitle.selectedIndex].text;
-  // userTitle = document.querySelector('input[name="gender"]:checked').value;
   drinkType=document.getElementById("drink_type");
   let text =drinkType.options[drinkType.selectedIndex].text;
   
