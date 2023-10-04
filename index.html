@@ -7,6 +7,49 @@
     <title>Welcome Page</title>
 </head>
 <body>
+<form action="">
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" name="age" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="checkbox" name="Gender" id="ch" value="male"> male
+        <input type="checkbox" name="Gender" id="ch" value="female"> female
+
+      </div>
+  
+      <div class="form-group">
+        <label for="drink_type">Drink type:</label>
+        <select class="form-control" id="drink_type" name="drink_type">
+          <option value="hot">Hot</option>
+          <option value="cold">Cold</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="drink_name">Drink name:</label>
+        <input type="text" class="form-control" id="drink_name" name="drink_name" required>
+      </div>
+  
+      <br>
+  
+<button id="sub">button</button>
+
+
+
+</form>
+
+
+
+
     <div id="divo"></div>
     
     <script src="app.js"></script>
