@@ -52,14 +52,36 @@
 //   console.log("Answer " + (i + 1) + ": " + answers[i]);
 // }
 let userName, Age, userTitle, drinkType, drinkName;
+var checkboxes=document.querySelectorAll("ch");
+function handleCheckboxClick(even){
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox !== even.target) {
+      checkbox.checked = false;
+    }
+  });
+}
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("click", handleCheckboxClick);
+});
 
 let sub = document.getElementById("sub");
 sub.onclick = function collectDrinkOrder(e) {
   e.preventDefault();
   userName = document.querySelector('#name').value;
   Age = document.querySelector('#age').value;
-  userTitle=document.getElementById("gender");
-  let gender =userTitle.options[userTitle.selectedIndex].text;
+  // userTitle=document.getElementById("gender");
+  // let gender =userTitle.options[userTitle.selectedIndex].text;
+  var checkboxes=document.querySelectorAll("#ch");
+
+  let yes;
+
+    if (checkboxes[0].checked == true) {
+      yes = "male";
+    } else{
+      yes = "female";
+    }
+
   drinkType=document.getElementById("drink_type");
   let text =drinkType.options[drinkType.selectedIndex].text;
   
@@ -78,7 +100,7 @@ sub.onclick = function collectDrinkOrder(e) {
   ul.appendChild(li3);
 
   par.innerHTML = userName;
-  li1.innerHTML = gender;
+  li1.innerHTML = yes;
   li2.innerHTML = Age;
   li3.innerHTML = text + " " + drinkName;
   document.body.appendChild(div);
